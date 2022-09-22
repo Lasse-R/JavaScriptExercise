@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<body>
+
+<div id="first" style="width: 100px;margin: 1px;">&nbsp;</div>
+<div id="second" style="width: 100px;margin: 1px;">&nbsp;</div>
+<div id="third" style="width: 100px;margin: 1px;">&nbsp;</div>
+
+<button id="button1">change Colour</button>
+
+<a href="index.html">Home</a>
+
+<script>
+
+var button = document.getElementById("button1");
+    button.addEventListener("click", clicked, false);
+
+    const allDiv = document.querySelectorAll("div")
+    for (const key in allDiv) {
+        const div = allDiv[key]
+        div.style.backgroundColor = "blue"
+    }
+
+    function clicked(){
+        document.getElementById("first").style.backgroundColor = "red"
+        document.getElementById("second").style.backgroundColor = "yellow"
+        document.getElementById("third").style.backgroundColor = "green"
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>
+    
+    <style>
+        .my-div {width: 25px; height: 25px;background-color:red; margin:1px;}
+    </style>
+
+    <div id="outer">
+
+        <div id="firstDiv" class="my-div"></div>
+
+        <div id="secondDiv" class="my-div"></div>
+
+        <div id="thirdDiv" class="my-div"></div>
+
+        <div id="fourthDiv" class="my-div"></div>
+
+        <div id="fifthDiv" class="my-div"></div>
+
+        <div id="sixthDiv" class="my-div"></div>
+
+        <div id="seventhDiv" class="my-div"></div>
+
+        <div id="eigthDiv" class="my-div"></div>
+
+        <div id="ninthDiv" class="my-div"></div>
+
+        <div id="tenthDiv" class="my-div"></div>
+
+    </div>
+
+    <p id="paragraph"></p>
+
+<script>
+
+    var button = document.getElementById("outer");
+    button.addEventListener("click", buttonClicked)
+
+    function buttonClicked(e){
+
+        
+        const id = e.target.getAttribute("id")    
+        if(id == "outer"){
+            
+        }
+        else{
+            document.getElementById("paragraph").innerText = "Hello from " + id
+            console.log("Hello from " + id)
+        }
+    }
+
+</script>
+
+</body>
+</html>
