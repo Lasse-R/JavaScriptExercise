@@ -12,6 +12,7 @@
 </head>
 <body>
 
+    <div class="container">
     <table class="table">
         <thead>
         <tr>
@@ -23,8 +24,12 @@
         </tr>
         </thead>
         <tbody id="tbody">
+            <tr>
+
+            </tr>
         </tbody>
     </table>
+</div>
     
 
     <script>
@@ -37,11 +42,28 @@
             { id: 5, year: 2005, make: 'Volvo', model: 'V70', price: 44799 }
         ];
 
-        const table = cars.map(car => `<td>${car}</td>`)
-        .join("")
+            const carRows = cars.map(car => {
+                const carRow  = `
+                    <tr>
+                        <td>${car.id}</td>
+                        <td>${car.year}</td>
+                        <td>${car.make}</td>
+                        <td>${car.model}</td>
+                        <td>${car.price}</td>
+                    </tr>
+                `
 
-        document.getElementById("tbody").innerHTML = table
+                return carRow
+            }).join('')
 
+            document.getElementById("tbody").innerHTML = carRows
+        
+        
+        
+
+
+
+    
     </script>
     
 </body>
